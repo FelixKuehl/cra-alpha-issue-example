@@ -1,0 +1,49 @@
+{
+  "name": "library",
+  "version": "0.1.3",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.0-next.a671462c"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && react-snapshot",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">0.25%",
+      "not op_mini all",
+      "ie 11"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": false
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "src/**/*.{css,scss,sass}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "reactSnapshot": {
+    "include": [
+      "/404"
+    ]
+  }
+}

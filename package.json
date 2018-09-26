@@ -1,0 +1,25 @@
+{
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "scripts": {
+    "precommit": "lint-staged",
+    "build:libs": "lerna run build:lib"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": false
+  },
+  "lint-staged": {
+    "*.{js,jsx,json}": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "*.{css,scss,sass}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  }
+}
